@@ -1,0 +1,16 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Back center leg (straight down) -->
+  <path d="M66 60 L70 130 Q75 138 80 130 L84 60 Z" fill="#E57C23"/>
+  
+  <!-- Front left leg - spreading outward to the left -->
+  <path d="M40 58 L20 125 Q22 135 32 128 L52 58 Z" fill="#E8801C"/>
+  
+  <!-- Front right leg - spreading outward to the right -->
+  <path d="M98 58 L118 125 Q128 135 130 128 L110 58 Z" fill="#E8801C"/>
+  
+  <!-- Seat shadow/rim -->
+  <ellipse cx="75" cy="55" rx="52" ry="20" fill="#E89530"/>
+  
+  <!-- Seat top surface -->
+  <ellipse cx="75" cy="48" rx="52" ry="20" fill="#F9B845"/>
+</svg>

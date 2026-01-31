@@ -1,0 +1,183 @@
+import type { Config } from "tailwindcss"
+
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        'urbanist': ['var(--font-urbanist)', 'Urbanist', 'sans-serif'],
+        'spectral': ['var(--font-spectral)', 'Spectral', 'serif'],
+        'sans': ['var(--font-urbanist)', 'Urbanist', 'sans-serif'],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "#B04725", // 600
+          100: "#F0C7B9",
+          200: "#E9AA96",
+          300: "#E18E73",
+          400: "#DA7250",
+          500: "#D2552D",
+          600: "#B04725",
+          700: "#8D391E",
+          800: "#6F2D18",
+          900: "#512111",
+          1000: "#33150B",
+          "alpha-10": "rgba(141, 57, 30, 0.1)",
+          "alpha-50": "rgba(141, 57, 30, 0.5)",
+          foreground: "#FFFFFF",
+        },
+        secondary: {
+          DEFAULT: "#00B7D9", // 600
+          100: "#ABF2FF",
+          200: "#82EBFF",
+          300: "#58E4FF",
+          400: "#2EDEFF",
+          500: "#04D7FF",
+          600: "#00B7D9",
+          700: "#0093AF",
+          800: "#007086",
+          900: "#004D5C",
+          1000: "#002A32",
+          "alpha-10": "rgba(0, 42, 50, 0.1)",
+          "alpha-50": "rgba(0, 42, 50, 0.5)",
+          foreground: "#FFFFFF",
+        },
+        neutral: {
+          100: "#FFFFFF",
+          200: "#E8E8E8",
+          300: "#D2D2D2",
+          400: "#BBBBBB",
+          500: "#A4A4A4",
+          600: "#8E8E8E",
+          700: "#777777",
+          800: "#606060",
+          900: "#4A4A4A",
+          1000: "#333333",
+          "alpha-10": "rgba(51, 51, 51, 0.1)",
+        },
+        neutral2: {
+          100: "#FCFCFC",
+          200: "#E3DDC5",
+          300: "#D6CEAA",
+          400: "#C9BE8F",
+          500: "#BCAF75",
+          600: "#AF9F5A",
+          700: "#988949",
+          800: "#7D713C",
+          900: "#62582F",
+          1000: "#474022",
+          "alpha-10": "rgba(240, 237, 224, 0.1)",
+          "alpha-50": "rgba(240, 237, 224, 0.5)",
+        },
+        red: {
+          100: "#FB3748",
+          200: "#D00416",
+          "alpha-10": "rgba(251, 55, 72, 0.1)",
+        },
+        yellow: {
+          100: "#FFDB43",
+          200: "#DFB400",
+          "alpha-10": "rgba(255, 219, 67, 0.1)",
+        },
+        green: {
+          100: "#84EBB4",
+          200: "#1FC16B",
+          "alpha-10": "rgba(31, 193, 107, 0.1)",
+        },
+        accent: {
+          DEFAULT: "#E18E73",
+          foreground: "#FFFFFF",
+        },
+        muted: {
+          DEFAULT: "#D3D7E3",
+          foreground: "#8796AD",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      fontWeight: {
+        thin: "100",
+        extralight: "200",
+        light: "300",
+        regular: "400",
+        medium: "500",
+        semibold: "500", // medium bold
+        bold: "700",
+        extrabold: "800",
+        black: "900",
+      },
+      fontSize: {
+        "title-1": ["72px", { lineHeight: "88px", letterSpacing: "-0.8px" }],
+        "title-2": ["64px", { lineHeight: "76px", letterSpacing: "-0.8px" }],
+        "title-3": ["56px", { lineHeight: "68px", letterSpacing: "-0.6px" }],
+        h1: ["56px", { lineHeight: "68px", letterSpacing: "-0.5px" }],
+        h2: ["48px", { lineHeight: "58px", letterSpacing: "-0.4px" }],
+        h3: ["40px", { lineHeight: "48px", letterSpacing: "-0.3px" }],
+        h4: ["32px", { lineHeight: "38px", letterSpacing: "-0.2px" }],
+        h5: ["24px", { lineHeight: "30px", letterSpacing: "-0.15px" }],
+        h6: ["20px", { lineHeight: "24px", letterSpacing: "0px" }],
+        "label-1": ["16px", { lineHeight: "22px", letterSpacing: "-0.18px" }],
+        "label-2": ["14px", { lineHeight: "20px", letterSpacing: "-0.16px" }],
+        "label-3": ["12px", { lineHeight: "16px", letterSpacing: "-0.12px" }],
+        "body-1": ["18px", { lineHeight: "28px", letterSpacing: "0px" }],
+        "body-2": ["16px", { lineHeight: "24px", letterSpacing: "0px" }],
+        "body-3": ["14px", { lineHeight: "20px", letterSpacing: "0px" }],
+        "body-4": ["12px", { lineHeight: "16px", letterSpacing: "0px" }],
+        "caption-1": ["10px", { lineHeight: "12px", letterSpacing: "0px" }],
+        "caption-2": ["9px", { lineHeight: "10px", letterSpacing: "0px" }],
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config
