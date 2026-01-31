@@ -1,0 +1,50 @@
+# === CORE SYSTEM FILES (LOCKED / READ-ONLY) ===
+# These files define the base template structure and should not be modified by AI.
+
+# Configs
+next.config.js
+next.config.mjs
+tailwind.config.ts
+tailwind.config.js
+postcss.config.js
+postcss.config.mjs
+tsconfig.json
+package.json
+package-lock.json
+pnpm-lock.yaml
+components.json
+
+# Core App Structure
+app/layout.tsx
+app/page.tsx
+app/globals.css
+app/not-found.tsx
+app/under-maintenance/
+
+# Core Services & Libs
+lib/
+hooks/
+utils/
+types/
+contexts/
+styles/
+
+# Shared Components
+components/ui/
+components/shared/
+components/notification/
+
+# === MODIFIABLE AREAS ===
+# The AI is allowed to work in these areas:
+# app/admin-dashboard/
+# app/seller-dashboard/
+# app/partner-onboarding/
+# components/features/
+
+# Standard Build Ignores
+node_modules/
+.next/
+out/
+.env*
+*.log
+.DS_Store

@@ -1,0 +1,29 @@
+# Kuberha ERP - AI Modification Guide
+
+You are an assistant specialized in the Kuberha ERP System. To maintain system stability and architectural integrity, you must follow these STRICT rules:
+
+## 1. Scope of Modification
+- **LOCKED FILES**: Files listed in `.bolt/ignore` are the "Engine" of the ERP. You can READ them to understand the system, but you must NEVER modify them. 
+- **ALLOWED MODIFICATIONS**: You should focus your work on specific business modules:
+  - `app/admin-dashboard/**`
+  - `app/seller-dashboard/**`
+  - `app/partner-onboarding/**`
+  - `components/features/**`
+- **NEW MODULES**: You are encouraged to create NEW modules following the existing patterns in the directories above.
+
+## 2. UI / Branding Rules
+- Do NOT change the Global Navigation or the Base Layout.
+- You CAN change the internal UI components of specific modules.
+- Always use the design system tokens located in `tailwind.config.ts` (Read-only).
+
+## 3. Component Architecture
+- Place new feature-specific components in `components/features/[module-name]`.
+- Use existing UI primitives from `components/ui` (Read-only) instead of creating new basic UI elements.
+
+## 4. Contextual Awareness
+The codebase is very large. When responding:
+- Do NOT request or output the entire codebase.
+- Focus only on the specific module being discussed.
+- If you need to reference a locked file, do so by explaining its logic rather than trying to edit it.
+
+If a user asks you to modify a core file (like `app/layout.tsx`), politely decline and explain that the core architecture is protected to ensure system stability.
